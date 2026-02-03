@@ -1,0 +1,89 @@
+body{
+    margin:0;
+    height:100vh;
+    overflow:hidden;
+    font-family: Arial, sans-serif;
+}
+
+/* ================== Animated Circles Background ================== */
+
+.circles-background {
+    position: fixed;
+    inset: 0;
+    background:
+        radial-gradient(rgba(155, 109, 208, 0.6) 40px, transparent 41px),
+        radial-gradient(rgba(128, 153, 229, 0.6) 40px, transparent 41px),
+        radial-gradient(rgba(214, 31, 62, 0.5) 40px, transparent 41px),
+        rgb(245, 240, 255);
+    background-blend-mode: multiply;
+    background-size: 130px 130px;
+    background-position: 0 0, 65px 65px, 130px 0;
+    opacity: 1;
+    animation: moveCircles 20s linear infinite; /* moves the circles */
+}
+
+@keyframes moveCircles {
+    0% {
+        background-position: 0 0, 65px 65px, 130px 0;
+    }
+    25% {
+        background-position: 20px 50px, 85px 40px, 150px 20px;
+    }
+    50% {
+        background-position: 40px 0, 105px 85px, 170px 60px;
+    }
+    75% {
+        background-position: 20px 30px, 85px 65px, 150px 40px;
+    }
+    100% {
+        background-position: 0 0, 65px 65px, 130px 0;
+    }
+}
+
+
+
+/* ================== Main Card ================== */
+
+.card{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    background:rgba(171, 68, 226, 0.9);
+    padding:35px 50px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 15px 35px rgba(0,0,0,0.4);
+}
+
+/* ================== Button ================== */
+
+button{
+    padding:14px 35px;
+    font-size:18px;
+    border:none;
+    border-radius:25px;
+    background:#d21b86;
+    color:white;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#cd13a4;
+    box-shadow:0 0 15px #ff7f50;
+    transform:scale(1.1);
+}
+
+/* ================== Coordinates ================== */
+
+#loc{
+    margin-top:25px;
+    font-size:20px;
+    font-weight:bold;
+}
+
+#loc span{
+    display:inline-block;
+    transition:0.4s ease-in-out;
+}
